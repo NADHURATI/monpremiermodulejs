@@ -4,12 +4,11 @@ import getHeure from "./generate.js";
 // On importe la variable nom qui est déclarée dans la module user.js
 import {nom} from "./user.js";
 
+// importer l'objet utilisateur
+import {Utilisateur} from "./user.js";
+
 let nomUtilisateur = document.querySelector("#nom");
 nomUtilisateur.textContent = nom;
-
-import {objetUtilisateur} from "./user.js";
-let nomUtilisateurObjet = document.querySelector("#objetUtilisateur");
-nomUtilisateurObjet.textContent = objetUtilisateur;
 
 /* ==== Exercice ====
     --- dans le user.js ---
@@ -25,6 +24,16 @@ nomUtilisateurObjet.textContent = objetUtilisateur;
     -- dans index.html --
     3. afficher dans un index.html : nom , prénom et village de l'utilisateur
 */
+
+// Ici je vais afficher les objets de mon utilisateur
+let elementspanNom = document.querySelector("#nomUtilisateur");
+elementspanNom.textContent = Utilisateur.nom;
+
+let elementspanPrenom = document.querySelector("#prenomUtilisateur");
+elementspanPrenom.textContent = Utilisateur.prenom;
+
+let elementspanVillage = document.querySelector("#villageUtilisateur");
+elementspanVillage.textContent = Utilisateur.village;
 
 /*const heureCourant = getHeure;
 console.log(heureCourant.getHeure);*/
